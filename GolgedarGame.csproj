@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>SFML_Game</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="GolgedarEngine\**" />
+    <EmbeddedResource Remove="GolgedarEngine\**" />
+    <None Remove="GolgedarEngine\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include=".Sources\.Source.cs" />
+    <Compile Include=".Sources\Program.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".Sources\.Images\Player.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include=".Sources\.Images\Wall.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NvAPIWrapper.Net" Version="0.8.0.98" />
+    <PackageReference Include="SFML.Net" Version="2.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="GolgedarEngine">
+      <HintPath>..\GolgedarEngine\bin\Debug\netcoreapp3.1\GolgedarEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
