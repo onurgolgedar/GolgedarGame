@@ -1,5 +1,6 @@
 ﻿using GolgedarEngine;
 using GolgedarGame.GameObjects;
+using System.Collections.Immutable;
 
 namespace GolgedarGame
 {
@@ -12,18 +13,32 @@ namespace GolgedarGame
       {
       }
 
-      public override void Load(string roomName)
+      public override ImmutableList<string> GetRooms()
       {
-         Instances_SortedByDepth.Clear();
-         Instances_SortedByCreation.Clear();
+         return ImmutableList.Create(FIRST_ROOM,
+                                     SECOND_ROOM);
+      }
 
+      public override void SetDesign(string roomName)
+      {
          switch (roomName)
          {
             case FIRST_ROOM:
-               PutInstance(new Player(), Vectors.Create(20, 20), -10);
-               PutInstance(new Wall(), Vectors.Create(100, 100), 0);
-               PutInstance(new Wall(), Vectors.Create(200, 100), 0);
-               PutInstance(new Wall(), Vectors.Create(300, 100), 0);
+               PutInstance(new MainControl(), depth: -1000);
+               PutInstance(new Player(), Vector.Create(20, 20));
+               PutInstance(new Wall(), Vector.Create(100, 100), 50);
+               PutInstance(new Wall(), Vector.Create(180, 100), 50);
+               PutInstance(new Wall(), Vector.Create(260, 100), 50);
+               PutInstance(new Wall(), Vector.Create(340, 100), 50);
+               PutInstance(new Wall(), Vector.Create(340, 180), 50);
+               PutInstance(new Wall(), Vector.Create(340, 260), 50);
+               break;
+
+            case SECOND_ROOM:
+               PutInstance(new MainControl(), depth: -1000);
+               PutInstance(new Player(), Vector.Create(100, 100));
+               PutInstance(new Wall(), Vector.Create(500, 500), 50);
+               PutInstance(new Wall(), Vector.Create(580, 500), 50);
                break;
          }
       }
