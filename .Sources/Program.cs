@@ -8,11 +8,13 @@ namespace GolgedarGame
       [STAThread]
       static void Main()
       {
-         Global.LoadSprites(Source.IMAGES);
-         RoomData roomData = new RoomModel();
+         const string GAME_NAME = "Heatless Fire RPG";
 
-         Game game = new Game("Heatless Fire RPG", roomData);
-         Global.HandleNvidiaProfile("GolgedarGame");
+         Global.HandleNvidiaProfile(GAME_NAME, "golgedargame.exe");
+         Global.LoadSprites(Source.IMAGES);
+
+         RoomData roomData = new RoomModel();
+         Game game = new Game(GAME_NAME, roomData);
 
          game.LoadRoom(RoomModel.FIRST_ROOM);
          game.Run();

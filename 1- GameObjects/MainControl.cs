@@ -1,8 +1,5 @@
 ﻿using GolgedarEngine;
 using SFML.Window;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace GolgedarGame
 {
@@ -14,9 +11,8 @@ namespace GolgedarGame
 
       public override void Draw()
       {
-         
-      }
 
+      }
       public override void Loop()
       {
          if (Game.IsKeyPressed(Keyboard.Key.Enter) && Game.CheckKey(Keyboard.Key.LAlt))

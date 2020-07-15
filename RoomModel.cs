@@ -18,7 +18,6 @@ namespace GolgedarGame
          return ImmutableList.Create(FIRST_ROOM,
                                      SECOND_ROOM);
       }
-
       public override void SetDesign(string roomName)
       {
          switch (roomName)
