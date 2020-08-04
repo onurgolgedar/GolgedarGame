@@ -71,11 +71,6 @@ namespace GolgedarGame.GameObjects
 
       public override void Collision(GameObject gameObject)
       {
-         if (gameObject is Wall)
-         {
-            öl();
-            Wall.kır();
-         }
       }
 
       private int maxHealth;
