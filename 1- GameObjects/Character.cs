@@ -1,23 +1,20 @@
 ﻿using GolgedarEngine;
 using SFML.Graphics;
 using SFML.System;
-using SFML.Window;
-using System;
 
 namespace GolgedarGame.GameObjects
 {
-   class Player : GameObject, IPusher
+   class Character : GameObject, IPusher
    {
       readonly RectangleShape healthBar_outline;
       readonly RectangleShape healthBar_back;
       readonly RectangleShape healthBar_fill;
-      Vector2f previousPosition;
 
       public int MaxHealth { get => maxHealth; set { maxHealth = value; if (Health == 0) Health = value; } }
       public int Health { get; set; }
-      public uint Weight => 50;
+      public uint Weight => 10;
 
-      public Player() : base("Player.png")
+      public Character() : base("Player.png")
       {
          MaxHealth = 100;
 
@@ -31,8 +28,6 @@ namespace GolgedarGame.GameObjects
 
          healthBar_fill = new RectangleShape(healthBar_back);
          healthBar_fill.FillColor = Color.Red;
-
-         previousPosition = Position;
       }
 
       public override void Draw()
@@ -49,33 +44,11 @@ namespace GolgedarGame.GameObjects
       }
       public override void Loop()
       {
-         previousPosition = Position;
-         Vector2f speed = new Vector2f();
-
-         if (Game.CheckKey(Keyboard.Key.W))
-            speed += 250 * Vector.Up;
-         if (Game.CheckKey(Keyboard.Key.A))
-            speed += 250 * Vector.Left;
-         if (Game.CheckKey(Keyboard.Key.S))
-            speed += 250 * Vector.Down;
-         if (Game.CheckKey(Keyboard.Key.D))
-            speed += 250 * Vector.Right;
-
-         Move(speed);
-
-         if (speed != new Vector2f(0, 0))
-            Sprite.Rotation = (float)Vector.GetDirection(speed);
-
-         Console.WriteLine(Position);
+         Vector2f previousPosition = Position;
       }
 
       public override void Collision(GameObject gameObject)
       {
-         if (gameObject is Wall)
-         {
-            öl();
-            Wall.kır();
-         }
       }
 
       private int maxHealth;

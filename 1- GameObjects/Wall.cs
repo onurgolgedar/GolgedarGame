@@ -2,11 +2,13 @@
 
 namespace GolgedarGame.GameObjects
 {
-   class Wall : GameObject
+   class Wall : GameObject, IPusher
    {
-      internal Wall() : base("Wall.png")
+      public Wall() : base("Wall.png")
       {
       }
+
+      public uint Weight => uint.MaxValue;
 
       public override void Draw()
       {

@@ -24,20 +24,26 @@ namespace GolgedarGame
          {
             case FIRST_ROOM:
                PutInstance(new MainControl(), depth: -1000);
-               PutInstance(new Player(), Vector.Create(20, 20));
-               PutInstance(new Wall(), Vector.Create(100, 100), 50);
-               PutInstance(new Wall(), Vector.Create(180, 100), 50);
-               PutInstance(new Wall(), Vector.Create(260, 100), 50);
-               PutInstance(new Wall(), Vector.Create(340, 100), 50);
-               PutInstance(new Wall(), Vector.Create(340, 180), 50);
-               PutInstance(new Wall(), Vector.Create(340, 260), 50);
+               PutInstance(new Character(), Vector.Create(200, 200));
+               PutInstance(new Character(), Vector.Create(260, 200));
+               PutInstance(new Character(), Vector.Create(320, 200));
+               PutInstance(new Character(), Vector.Create(380, 200));
+               PutInstance(new Character(), Vector.Create(420, 200));
+               PutInstance(new Player(), Vector.Create(0, 0));
+
+               PutInstance(new Wall(), Vector.Create(200, 100), 50);
+               PutInstance(new Wall(), Vector.Create(305, 300), 50);
+               PutInstance(new Wall(), Vector.Create(410, 500), 50);
+               PutInstance(new Wall(), Vector.Create(515, 700), 50);
+               PutInstance(new Wall(), Vector.Create(620, 900), 50);
+               PutInstance(new Wall(), Vector.Create(725, 1100), 50);
+               PutInstance(new Wall(), Vector.Create(830, 1300), 50);
                break;
 
             case SECOND_ROOM:
                PutInstance(new MainControl(), depth: -1000);
                PutInstance(new Player(), Vector.Create(100, 100));
-               PutInstance(new Wall(), Vector.Create(500, 500), 50);
-               PutInstance(new Wall(), Vector.Create(580, 500), 50);
+               PutInstance(new BlackWall(), Vector.Create(500, 500), 50);
                break;
          }
       }

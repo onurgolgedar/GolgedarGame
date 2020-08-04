@@ -33,9 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="GolgedarEngine">
-      <HintPath>..\GolgedarEngine\bin\Debug\netcoreapp3.1\GolgedarEngine.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\GolgedarEngine\GolgedarEngine.csproj" />
   </ItemGroup>
 
 </Project>

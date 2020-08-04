@@ -5,7 +5,7 @@ namespace GolgedarGame
 {
    class MainControl : GameObject
    {
-      public MainControl() : base()
+      public MainControl() : base(canCollide: false)
       {
       }
 
