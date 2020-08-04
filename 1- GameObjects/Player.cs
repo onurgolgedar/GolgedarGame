@@ -65,8 +65,6 @@ namespace GolgedarGame.GameObjects
 
          if (speed != new Vector2f(0, 0))
             Sprite.Rotation = (float)Vector.GetDirection(speed);
-
-         Console.WriteLine(Position);
       }
 
       public override void Collision(GameObject gameObject)
