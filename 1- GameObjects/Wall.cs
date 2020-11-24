@@ -2,7 +2,7 @@
 
 namespace GolgedarGame.GameObjects
 {
-   class Wall : GameObject, IPusher
+   class Wall : GameObject
    {
       public Wall() : base("Wall.png")
       {

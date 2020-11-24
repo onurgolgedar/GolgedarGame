@@ -4,7 +4,7 @@ using SFML.System;
 
 namespace GolgedarGame.GameObjects
 {
-   class Character : GameObject, IPusher
+   class Character : GameObject
    {
       readonly RectangleShape healthBar_outline;
       readonly RectangleShape healthBar_back;

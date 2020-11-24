@@ -6,7 +6,7 @@ using System;
 
 namespace GolgedarGame.GameObjects
 {
-   class Player : GameObject, IPusher
+   class Player : GameObject
    {
       readonly RectangleShape healthBar_outline;
       readonly RectangleShape healthBar_back;
