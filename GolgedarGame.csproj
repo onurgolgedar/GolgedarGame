@@ -15,7 +15,6 @@
 
   <ItemGroup>
     <Compile Include=".Sources\.Source.cs" />
-    <Compile Include=".Sources\Program.cs" />
   </ItemGroup>
 
   <ItemGroup>
