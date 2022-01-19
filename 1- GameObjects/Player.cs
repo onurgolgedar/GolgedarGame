@@ -57,9 +57,9 @@ namespace GolgedarGame.GameObjects
          if (Game.CheckKey(Keyboard.Key.A))
             speed += 250 * Vector.Left;
          if (Game.CheckKey(Keyboard.Key.S))
-            speed += 250 * Vector.Down;
+            speed += 350 * Vector.Down;
          if (Game.CheckKey(Keyboard.Key.D))
-            speed += 250 * Vector.Right;
+            speed += 350 * Vector.Right;
 
          Move(speed);
 
@@ -69,6 +69,10 @@ namespace GolgedarGame.GameObjects
 
       public override void Collision(GameObject gameObject)
       {
+         if (gameObject is Wall)
+         {
+            gameObject.Position += new Vector2f(4, 4);
+         }
       }
 
       private int maxHealth;
