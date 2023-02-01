@@ -33,7 +33,7 @@
 
   <ItemGroup>
     <Reference Include="GolgedarEngine">
-      <HintPath>..\..\GolgedarEngine.dll</HintPath>
+      <HintPath>GolgedarEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
 
