@@ -32,7 +32,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GolgedarEngine\GolgedarEngine.csproj" />
+    <Reference Include="GolgedarEngine">
+      <HintPath>..\..\GolgedarEngine.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

@@ -1,14 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30204.135
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GolgedarGame", "GolgedarGame.csproj", "{C13224DD-C581-4C18-9E39-6C799902197E}"
-	ProjectSection(ProjectDependencies) = postProject
-		{94A0BFA5-9FF0-42F9-B914-0AAF3EE905B9} = {94A0BFA5-9FF0-42F9-B914-0AAF3EE905B9}
-	EndProjectSection
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GolgedarEngine", "..\GolgedarEngine\GolgedarEngine.csproj", "{94A0BFA5-9FF0-42F9-B914-0AAF3EE905B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,10 +15,6 @@ Global
 		{C13224DD-C581-4C18-9E39-6C799902197E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C13224DD-C581-4C18-9E39-6C799902197E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C13224DD-C581-4C18-9E39-6C799902197E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{94A0BFA5-9FF0-42F9-B914-0AAF3EE905B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{94A0BFA5-9FF0-42F9-B914-0AAF3EE905B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{94A0BFA5-9FF0-42F9-B914-0AAF3EE905B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{94A0BFA5-9FF0-42F9-B914-0AAF3EE905B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
