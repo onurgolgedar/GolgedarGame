@@ -8,10 +8,10 @@ namespace GolgedarGame
       [STAThread]
       static void Main()
       {
-         const string GAME_NAME = "Heatless Fire RPG";
+         const string GAME_NAME = "Lufulus Online";
 
-         Global.HandleNvidiaProfile(GAME_NAME, "golgedargame.exe");
-         Global.LoadSprites(Source.IMAGES);
+         Global.HandleNvidiaProfile(GAME_NAME, "lufulusonline.exe");
+         Global.LoadSprites(Resource.IMAGES);
 
          RoomData roomData = new RoomModel();
          Game game = new Game(GAME_NAME, roomData);
