@@ -1,23 +1,25 @@
 using GolgedarEngine;
 using System;
+using System.Diagnostics;
+using System.IO;
 
 namespace GolgedarGame
 {
-   static class Program
-   {
-      [STAThread]
-      static void Main()
-      {
-         const string GAME_NAME = "Lufulus Online";
+    static class Program
+    {
+        const string GAME_NAME = "Lufulus Online";
 
-         Global.HandleNvidiaProfile(GAME_NAME, "lufulusonline.exe");
-         Global.LoadSprites(Resource.IMAGES);
+        [STAThread]
+        static void Main()
+        {
+            Global.HandleNvidiaProfile(GAME_NAME);
+            Global.LoadSprites(Resources.IMAGES);
 
-         RoomData roomData = new RoomModel();
-         Game game = new Game(GAME_NAME, roomData);
+            RoomData roomData = new RoomModel();
+            Game game = new Game(GAME_NAME, roomData);
 
-         game.LoadRoom(RoomModel.FIRST_ROOM);
-         game.Run();
-      }
-   }
+            game.LoadRoom(RoomModel.FIRST_ROOM);
+            game.Run();
+        }
+    }
 }

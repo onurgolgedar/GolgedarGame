@@ -2,7 +2,7 @@
 
 namespace GolgedarGame
 {
-    class Resource
+    class Resources
     {
         public const string SPRITE_PLAYER = "Player.png";
         public const string SPRITE_WALL = "Wall.png";

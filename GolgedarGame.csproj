@@ -14,7 +14,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include=".Resources\.Resource.cs" />
+    <None Remove="GolgedarEngine.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include=".Resources\.Resources.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,13 +31,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="NvAPIWrapper.Net" Version="0.8.0.98" />
-    <PackageReference Include="SFML.Net" Version="2.5.0" />
+    <PackageReference Include="NvAPIWrapper.Net" Version="0.8.1.101" />
+    <PackageReference Include="SFML.Net" Version="2.6.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="GolgedarEngine">
       <HintPath>GolgedarEngine.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
 
