@@ -8,8 +8,6 @@ namespace GolgedarGame.GameObjects
       {
       }
 
-      public uint Weight => uint.MaxValue;
-
       public override void Draw()
       {
          DrawSelf();
