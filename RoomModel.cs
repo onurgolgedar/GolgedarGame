@@ -1,5 +1,4 @@
 ﻿using GolgedarEngine;
-using GolgedarGame.GameObjects;
 using System.Collections.Immutable;
 
 namespace GolgedarGame
@@ -22,10 +21,6 @@ namespace GolgedarGame
             switch (roomName)
             {
                 case FIRST_ROOM:
-                    PutInstance(new Client(), depth: -1000);
-                    PutInstance(new Player(), Vector.Create(100, 100));
-
-                    PutInstance(new Wall(), Vector.Create(200, 100), 50);
                     break;
 
                 case SECOND_ROOM:
