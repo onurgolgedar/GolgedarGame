@@ -1,11 +1,11 @@
 using GolgedarEngine;
 using System;
 
-namespace GolgedarGame
+namespace GolgedarServer
 {
     static class Program
     {
-        const string GAME_NAME = "Lufulus Online";
+        const string GAME_NAME = "Lufulus Online (Server)";
 
         [STAThread]
         static void Main()

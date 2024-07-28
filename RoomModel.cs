@@ -1,8 +1,8 @@
 ﻿using GolgedarEngine;
-using GolgedarGame.GameObjects;
+using GolgedarServer.GameObjects;
 using System.Collections.Immutable;
 
-namespace GolgedarGame
+namespace GolgedarServer
 {
     public class RoomModel : RoomData
     {
@@ -24,7 +24,7 @@ namespace GolgedarGame
                 case FIRST_ROOM:
                     PutInstance(new Server(), depth: -1000);
 
-                    PutInstance(new Wall(), Vector.Create(200, 100), 50);
+                    PutInstance(new Obstacle(), Vector.Create(200, 100), 50);
                     break;
 
                 case SECOND_ROOM:

@@ -25,7 +25,7 @@
     <None Include=".Resources\.Images\Player.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include=".Resources\.Images\Wall.png">
+    <None Include=".Resources\.Images\Obstacle.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

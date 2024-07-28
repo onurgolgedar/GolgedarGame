@@ -1,16 +1,16 @@
 ﻿using GolgedarEngine;
+using GolgedarServer.EngineAddOn;
 using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
 
-namespace GolgedarGame.GameObjects
+namespace GolgedarServer.GameObjects
 {
-    class Player : GameObject
+    class Player : ConnectedGameObject
     {
-        public string IP { get => ip; set => ip = value; }
-        public Vector2f PreviousPosition { get => previousPosition; set => previousPosition = value; }
+        Vector2f previousPosition;
 
-        public Player() : base("Player.png")
+        public Player(int connectionID) : base(connectionID, Resources.SPRITE_PLAYER)
         {
             PreviousPosition = Position;
         }
@@ -22,30 +22,14 @@ namespace GolgedarGame.GameObjects
         public override void Loop()
         {
             PreviousPosition = Position;
-
-            Vector2f speed = new Vector2f();
-            if (Game.CheckKey(Keyboard.Key.W))
-                speed += 250 * Vector.Up;
-            if (Game.CheckKey(Keyboard.Key.A))
-                speed += 250 * Vector.Left;
-            if (Game.CheckKey(Keyboard.Key.S))
-                speed += 250 * Vector.Down;
-            if (Game.CheckKey(Keyboard.Key.D))
-                speed += 250 * Vector.Right;
-
-            Move(speed);
-
-            if (speed != new Vector2f(0, 0))
-                Sprite.Rotation = (float)Vector.GetDirection(speed);
         }
 
         public override void Collision(GameObject gameObject)
         {
-            if (gameObject is Wall)
+            if (gameObject is Obstacle)
                 Position = PreviousPosition;
         }
 
-        Vector2f previousPosition;
-        string ip;
+        public Vector2f PreviousPosition { get => previousPosition; set => previousPosition = value; }
     }
 }
