@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0-windows7.0</TargetFramework>
-    <RootNamespace>SFML_Game</RootNamespace>
+    <TargetFramework>net8.0-windows8.0</TargetFramework>
+    <RootNamespace>GolgedarClient</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
