@@ -1,5 +1,4 @@
 ﻿using GolgedarEngine;
-using Microsoft.VisualBasic.Devices;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
@@ -14,16 +13,17 @@ namespace GolgedarGame
         public const string SERVER_HOST = "127.0.0.1";
 
         TcpClient client;
-        StreamReader reader;
-        StreamWriter writer;
+        public static StreamReader reader;
+        public static StreamWriter writer;
         NetworkStream stream;
 
         public Client() : base(canCollide: false)
         {
-            client = new TcpClient(new IPEndPoint(IPAddress.Parse(SERVER_HOST), SERVER_PORT))
+            client = new TcpClient()
             {
                 SendTimeout = 10000
             };
+            client.Connect(new IPEndPoint(IPAddress.Parse(SERVER_HOST), SERVER_PORT));
 
             stream = client.GetStream();
             reader = new(stream, Encoding.UTF8);
@@ -36,14 +36,6 @@ namespace GolgedarGame
         }
         public override void Loop()
         {
-            if (Game.IsKeyPressed(SFML.Window.Keyboard.Key.Enter))
-            {
-                Task.Run(async () =>
-                {
-                    await writer.WriteLineAsync("Selam");
-                    writer.Flush();
-                });
-            }
         }
     }
 }

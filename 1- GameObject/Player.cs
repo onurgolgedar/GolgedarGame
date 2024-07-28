@@ -2,6 +2,7 @@
 using SFML.Graphics;
 using SFML.System;
 using SFML.Window;
+using System.Threading.Tasks;
 
 namespace GolgedarGame.GameObjects
 {
@@ -21,20 +22,15 @@ namespace GolgedarGame.GameObjects
         {
             previousPosition = Position;
 
-            Vector2f speed = new();
-            if (Game.CheckKey(Keyboard.Key.W))
-                speed += 250 * Vector.Up;
-            if (Game.CheckKey(Keyboard.Key.A))
-                speed += 250 * Vector.Left;
-            if (Game.CheckKey(Keyboard.Key.S))
-                speed += 350 * Vector.Down;
-            if (Game.CheckKey(Keyboard.Key.D))
-                speed += 350 * Vector.Right;
-
-            Move(speed);
-
-            if (speed != new Vector2f(0, 0))
-                Sprite.Rotation = (float)Vector.GetDirection(speed);
+            if (Game.IsKeyPressed(Keyboard.Key.W))
+            {
+                Task.Run(async () =>
+                {
+                    await Client.writer.WriteLineAsync("W");
+                    Move(Vector.Create(0, -100));
+                    Client.writer.Flush();
+                });
+            }
         }
 
         public override void Collision(GameObject gameObject)

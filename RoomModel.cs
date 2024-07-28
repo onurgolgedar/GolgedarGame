@@ -23,7 +23,7 @@ namespace GolgedarGame
             {
                 case FIRST_ROOM:
                     PutInstance(new Client(), depth: -1000);
-                    PutInstance(new Player(), Vector.Create(0, 0));
+                    PutInstance(new Player(), Vector.Create(100, 100));
 
                     PutInstance(new Wall(), Vector.Create(200, 100), 50);
                     break;
