@@ -21,6 +21,7 @@ namespace GolgedarGame
             switch (roomName)
             {
                 case FIRST_ROOM:
+                    PutInstance(new Client());
                     break;
 
                 case SECOND_ROOM:
