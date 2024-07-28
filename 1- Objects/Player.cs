@@ -1,10 +1,7 @@
 ﻿using GolgedarEngine;
-using GolgedarServer.EngineAddOn;
-using SFML.Graphics;
 using SFML.System;
-using SFML.Window;
 
-namespace GolgedarServer.GameObjects
+namespace GolgedarServer
 {
     class Player : ConnectedGameObject
     {

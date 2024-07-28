@@ -1,6 +1,7 @@
 ﻿using GolgedarEngine;
 
-namespace GolgedarServer.GameObjects
+namespace GolgedarServer
+
 {
     class Obstacle : GameObject
     {
