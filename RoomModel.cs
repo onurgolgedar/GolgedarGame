@@ -1,7 +1,7 @@
 ﻿using GolgedarEngine;
 using System.Collections.Immutable;
 
-namespace GolgedarGame
+namespace GolgedarClient
 {
     public class RoomModel : RoomData
     {

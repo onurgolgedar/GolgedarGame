@@ -1,6 +1,6 @@
 ﻿using GolgedarEngine;
 
-namespace GolgedarGame.GameObjects
+namespace GolgedarClient
 {
     class Wall : GameObject
     {

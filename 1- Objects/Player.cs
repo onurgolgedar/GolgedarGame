@@ -1,7 +1,7 @@
 ﻿using GolgedarEngine;
 using SFML.System;
 
-namespace GolgedarGame.GameObjects
+namespace GolgedarClient
 {
     class Player : GameObject
     {

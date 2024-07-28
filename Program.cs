@@ -1,7 +1,7 @@
 using GolgedarEngine;
 using System;
 
-namespace GolgedarGame
+namespace GolgedarClient
 {
     static class Program
     {
