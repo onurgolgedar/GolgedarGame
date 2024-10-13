@@ -31,19 +31,20 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="NvAPIWrapper.Net" Version="0.8.1.101" />
     <PackageReference Include="SFML.Net" Version="2.6.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="GolgedarEngine">
-      <HintPath>GolgedarEngine.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
+    <Folder Include="Properties\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <Reference Include="GolgedarEngine">
+      <HintPath>..\GolgedarEngine\bin\Debug\net8.0\GolgedarEngine.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
 
 </Project>
